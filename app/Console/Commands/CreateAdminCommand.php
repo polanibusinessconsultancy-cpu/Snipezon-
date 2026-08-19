@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rules\Password;
 
 class CreateAdminCommand extends Command
 {
@@ -46,11 +47,15 @@ class CreateAdminCommand extends Command
         ], [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
-            'password' => ['required', 'string', 'min:8', 'same:password_confirmation'],
+            'password' => [
+                'required',
+                'string',
+                'same:password_confirmation',
+                Password::min(12)->mixedCase()->numbers()->symbols(),
+            ],
         ], [
             'email.unique' => 'An account with this email address already exists.',
             'password.same' => 'The password confirmation does not match.',
-            'password.min' => 'Password must be at least 8 characters long.',
         ]);
 
         if ($validator->fails()) {

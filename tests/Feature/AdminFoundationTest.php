@@ -133,9 +133,97 @@ class AdminFoundationTest extends TestCase
         $this->artisan('snipezon:create-admin')
             ->expectsQuestion('Administrator Name', 'New Admin')
             ->expectsQuestion('Administrator Email', 'existingadmin@example.com')
-            ->expectsQuestion('Password', 'Password123!')
-            ->expectsQuestion('Confirm Password', 'Password123!')
+            ->expectsQuestion('Password', 'StrongPass#2026')
+            ->expectsQuestion('Confirm Password', 'StrongPass#2026')
             ->assertExitCode(1);
+    }
+
+    public function test_admin_creation_rejects_short_password(): void
+    {
+        $this->artisan('snipezon:create-admin')
+            ->expectsQuestion('Administrator Name', 'Short Pass Admin')
+            ->expectsQuestion('Administrator Email', 'shortpass@example.com')
+            ->expectsQuestion('Password', 'Short1!')
+            ->expectsQuestion('Confirm Password', 'Short1!')
+            ->assertExitCode(1);
+
+        $this->assertDatabaseMissing('users', ['email' => 'shortpass@example.com']);
+    }
+
+    public function test_admin_creation_rejects_missing_uppercase(): void
+    {
+        $this->artisan('snipezon:create-admin')
+            ->expectsQuestion('Administrator Name', 'No Upper Admin')
+            ->expectsQuestion('Administrator Email', 'noupper@example.com')
+            ->expectsQuestion('Password', 'nouppercase123!')
+            ->expectsQuestion('Confirm Password', 'nouppercase123!')
+            ->assertExitCode(1);
+
+        $this->assertDatabaseMissing('users', ['email' => 'noupper@example.com']);
+    }
+
+    public function test_admin_creation_rejects_missing_lowercase(): void
+    {
+        $this->artisan('snipezon:create-admin')
+            ->expectsQuestion('Administrator Name', 'No Lower Admin')
+            ->expectsQuestion('Administrator Email', 'nolower@example.com')
+            ->expectsQuestion('Password', 'NOLOWERCASE123!')
+            ->expectsQuestion('Confirm Password', 'NOLOWERCASE123!')
+            ->assertExitCode(1);
+
+        $this->assertDatabaseMissing('users', ['email' => 'nolower@example.com']);
+    }
+
+    public function test_admin_creation_rejects_missing_number(): void
+    {
+        $this->artisan('snipezon:create-admin')
+            ->expectsQuestion('Administrator Name', 'No Number Admin')
+            ->expectsQuestion('Administrator Email', 'nonumber@example.com')
+            ->expectsQuestion('Password', 'NoNumbersHere!')
+            ->expectsQuestion('Confirm Password', 'NoNumbersHere!')
+            ->assertExitCode(1);
+
+        $this->assertDatabaseMissing('users', ['email' => 'nonumber@example.com']);
+    }
+
+    public function test_admin_creation_rejects_missing_symbol(): void
+    {
+        $this->artisan('snipezon:create-admin')
+            ->expectsQuestion('Administrator Name', 'No Symbol Admin')
+            ->expectsQuestion('Administrator Email', 'nosymbol@example.com')
+            ->expectsQuestion('Password', 'NoSymbolsHere123')
+            ->expectsQuestion('Confirm Password', 'NoSymbolsHere123')
+            ->assertExitCode(1);
+
+        $this->assertDatabaseMissing('users', ['email' => 'nosymbol@example.com']);
+    }
+
+    public function test_admin_creation_rejects_confirmation_mismatch(): void
+    {
+        $this->artisan('snipezon:create-admin')
+            ->expectsQuestion('Administrator Name', 'Mismatch Admin')
+            ->expectsQuestion('Administrator Email', 'mismatch@example.com')
+            ->expectsQuestion('Password', 'StrongPass#2026')
+            ->expectsQuestion('Confirm Password', 'DifferentPass#2026')
+            ->assertExitCode(1);
+
+        $this->assertDatabaseMissing('users', ['email' => 'mismatch@example.com']);
+    }
+
+    public function test_admin_creation_accepts_valid_strong_password(): void
+    {
+        $this->artisan('snipezon:create-admin')
+            ->expectsQuestion('Administrator Name', 'Valid Super Admin')
+            ->expectsQuestion('Administrator Email', 'superadmin@example.com')
+            ->expectsQuestion('Password', 'StrongPass#2026')
+            ->expectsQuestion('Confirm Password', 'StrongPass#2026')
+            ->expectsChoice('Select Administrator Role', 'Super Admin', ['Super Admin', 'Admin'])
+            ->assertExitCode(0);
+
+        $this->assertDatabaseHas('users', ['email' => 'superadmin@example.com']);
+
+        $user = User::where('email', 'superadmin@example.com')->first();
+        $this->assertTrue($user->isSuperAdmin());
     }
 
     public function test_env_remains_untracked(): void
