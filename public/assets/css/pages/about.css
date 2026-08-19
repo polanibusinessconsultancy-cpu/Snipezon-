@@ -1,0 +1,295 @@
+/* Snipezon About Page Stylesheet */
+
+/* ==========================================================================
+   1. ABOUT HERO & DUAL-ECOSYSTEM VISUAL
+   ========================================================================== */
+
+.about-hero-section {
+  position: relative;
+  padding-top: calc(var(--header-height) + 20px);
+  padding-bottom: clamp(60px, 8vw, 100px);
+  overflow: hidden;
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: clamp(32px, 5vw, 64px);
+}
+
+.dual-ecosystem-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eco-core-hub {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 2px solid var(--color-primary-light);
+  box-shadow: 0 0 60px rgba(124, 58, 237, 0.45), inset 0 0 30px rgba(34, 211, 238, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.eco-core-hub img {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 0 14px rgba(155, 108, 255, 0.8));
+}
+
+.eco-ring {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.eco-ring-digital {
+  width: 320px;
+  height: 320px;
+  border: 1px dashed rgba(124, 58, 237, 0.4);
+  animation: spinSlow 40s linear infinite;
+}
+
+.eco-ring-supply {
+  width: 440px;
+  height: 440px;
+  border: 1px stroke rgba(34, 211, 238, 0.3);
+  animation: spinSlow 60s linear reverse infinite;
+}
+
+.eco-node {
+  position: absolute;
+  padding: 8px 14px;
+  background: rgba(11, 20, 38, 0.92);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), var(--shadow-glow);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text);
+  white-space: nowrap;
+  backdrop-filter: blur(10px);
+  z-index: 4;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.eco-node:hover {
+  border-color: var(--color-cyan);
+  transform: scale(1.06);
+}
+
+.eco-node svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--color-cyan);
+}
+
+.eco-digital-1 { top: 4%; left: 8%; animation: floatOrb 6s ease-in-out infinite; }
+.eco-digital-2 { top: 6%; right: 6%; animation: floatOrb 7s ease-in-out infinite 1s; }
+.eco-supply-1 { bottom: 6%; right: 8%; animation: floatOrb 8s ease-in-out infinite 1.5s; }
+.eco-supply-2 { bottom: 4%; left: 6%; animation: floatOrb 7.5s ease-in-out infinite 0.8s; }
+
+/* ==========================================================================
+   2. PURPOSE & DIRECTION CARDS
+   ========================================================================== */
+
+.purpose-direction-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 40px);
+}
+
+.purpose-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-large);
+  padding: clamp(32px, 4vw, 48px);
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.purpose-card:hover {
+  border-color: var(--color-primary-light);
+}
+
+.purpose-card p {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   3. TWO COMPANY DIVISIONS PANELS
+   ========================================================================== */
+
+.divisions-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(32px, 4vw, 48px);
+  align-items: stretch;
+}
+
+.division-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-large);
+  padding: clamp(32px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.division-panel.digital-panel {
+  border-color: var(--color-primary-light);
+  box-shadow: 0 0 50px rgba(124, 58, 237, 0.12);
+}
+
+.division-panel:hover {
+  border-color: var(--color-cyan);
+}
+
+.division-tag-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 20px 0 32px 0;
+}
+
+.division-tag {
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-pill);
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--color-cyan);
+}
+
+/* ==========================================================================
+   4. SNIPEZON DIFFERENTIATORS & PARTNERSHIP
+   ========================================================================== */
+
+.differentiators-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.diff-card {
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  padding: 24px 16px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.diff-card:hover {
+  border-color: var(--color-cyan);
+  transform: translateY(-4px);
+}
+
+.diff-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(34, 211, 238, 0.12);
+  color: var(--color-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px auto;
+}
+
+.diff-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.diff-title {
+  font-size: 0.925rem;
+  font-weight: 700;
+}
+
+/* Quote Card */
+.message-quote-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-primary-light);
+  border-radius: var(--radius-large);
+  padding: clamp(32px, 5vw, 64px);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 50px rgba(124, 58, 237, 0.15);
+  position: relative;
+}
+
+.message-quote-text {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .differentiators-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 1024px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .dual-ecosystem-wrapper {
+    margin-top: 40px;
+    max-width: 400px;
+  }
+
+  .purpose-direction-grid, .divisions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .differentiators-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .eco-supply-1, .eco-supply-2 { display: none; }
+  .eco-digital-1 { top: 0%; left: 0%; }
+  .eco-digital-2 { top: 0%; right: 0%; }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .eco-ring-digital, .eco-ring-supply, .eco-node {
+    animation: none !important;
+  }
+}

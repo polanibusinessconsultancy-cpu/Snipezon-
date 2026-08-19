@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" fill="none">
+  <defs>
+    <linearGradient id="toyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111b31" />
+      <stop offset="100%" stop-color="#07101f" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#toyGrad)" rx="16" />
+  <rect x="2" y="2" width="596" height="396" fill="none" stroke="rgba(139, 92, 246, 0.2)" stroke-width="2" rx="14" />
+  <g transform="translate(240, 130)">
+    <rect x="15" y="45" width="40" height="40" rx="6" stroke="#9b6cff" stroke-width="3" fill="rgba(155, 108, 255, 0.15)" />
+    <polygon points="60,15 85,55 35,55" stroke="#22d3ee" stroke-width="3" fill="rgba(34, 211, 238, 0.15)" />
+    <circle cx="85" cy="65" r="20" stroke="#7c3aed" stroke-width="3" fill="rgba(124, 58, 237, 0.15)" />
+  </g>
+  <text x="300" y="290" text-anchor="middle" font-family="'Sora', sans-serif" font-weight="700" font-size="20" fill="#f8fafc">Toys &amp; Games</text>
+  <text x="300" y="320" text-anchor="middle" font-family="'Manrope', sans-serif" font-size="14" fill="#a7b0c0">Safe, high-quality toy &amp; educational items</text>
+</svg>
