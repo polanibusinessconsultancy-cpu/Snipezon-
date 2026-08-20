@@ -2,7 +2,13 @@
 
 @section('title', 'E-commerce Website Development | Snipezon')
 @section('meta_description', 'Develop modern e-commerce storefronts with Snipezon featuring custom catalogs, payment gateway connections, cart systems, and order management.')
-@section('body_data_page', 'ecommerce-websites')
+
+
+@section('page_css')
+  <link rel="stylesheet" href="{{ asset('assets/css/pages/home.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/pages/service-details.css') }}">
+@endsection
+
 
 @section('content')
 <!-- 1. BREADCRUMB AND SERVICE HERO -->
@@ -42,7 +48,7 @@
           <div class="arch-ring arch-ring-outer"></div>
 
           <div class="arch-core-hub">
-            <img src="../{{ asset('assets/images/') }}logo/logo-icon.svg" alt="Snipezon Core" width="75" height="75">
+            <img src="{{ asset('assets/images/logo/logo-icon.svg') }}" alt="Snipezon Core" width="75" height="75">
           </div>
 
           <div class="arch-node arch-node-1">
@@ -544,7 +550,7 @@
       </div>
 
       <div class="related-services-grid">
-        <a href="static-dynamic-websites.html" class="related-service-card" data-animate="fade-up">
+        <a href="{{ route('services.websites') }}" class="related-service-card" data-animate="fade-up">
           <div>
             <h3 class="card-title">Static &amp; Dynamic Websites</h3>
             <p class="card-desc">Corporate websites, service showcases and marketing landing pages.</p>
@@ -552,7 +558,7 @@
           <span class="req-card-action">Explore Solution &rarr;</span>
         </a>
 
-        <a href="sales-bots.html" class="related-service-card" data-animate="fade-up" data-delay="100">
+        <a href="{{ route('services.sales-bots') }}" class="related-service-card" data-animate="fade-up" data-delay="100">
           <div>
             <h3 class="card-title">Sales Bots</h3>
             <p class="card-desc">Conversational lead qualification and product discovery tools.</p>
@@ -560,7 +566,7 @@
           <span class="req-card-action">Explore Solution &rarr;</span>
         </a>
 
-        <a href="whatsapp-business-api.html" class="related-service-card" data-animate="fade-up" data-delay="200">
+        <a href="{{ route('services.whatsapp-api') }}" class="related-service-card" data-animate="fade-up" data-delay="200">
           <div>
             <h3 class="card-title">WhatsApp Business API Setup</h3>
             <p class="card-desc">Official API integration, multi-agent chat and automated messaging.</p>
@@ -568,7 +574,7 @@
           <span class="req-card-action">Explore Solution &rarr;</span>
         </a>
 
-        <a href="custom-software-development.html" class="related-service-card" data-animate="fade-up" data-delay="300">
+        <a href="{{ route('services.custom-software') }}" class="related-service-card" data-animate="fade-up" data-delay="300">
           <div>
             <h3 class="card-title">Custom Software Development</h3>
             <p class="card-desc">Bespoke web applications, portals and business platforms.</p>
@@ -672,3 +678,4 @@
       </div>
     </section>
 @endsection
+

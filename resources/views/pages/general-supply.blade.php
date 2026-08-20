@@ -2,7 +2,12 @@
 
 @section('title', 'General Item Supply | Snipezon')
 @section('meta_description', 'Snipezon provides requirement-based sourcing for home essentials, corporate items, industrial supplies and toys.')
-@section('body_data_page', 'general-supply')
+
+
+@section('page_css')
+  <link rel="stylesheet" href="{{ asset('assets/css/pages/general-supply.css') }}">
+@endsection
+
 
 @section('content')
 <!-- 1. HERO SECTION -->
@@ -809,3 +814,4 @@
       </div>
     </section>
 @endsection
+

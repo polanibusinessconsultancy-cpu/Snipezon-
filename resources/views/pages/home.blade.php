@@ -2,7 +2,12 @@
 
 @section('title', 'Snipezon | Smart Digital Solutions Powered by AI')
 @section('meta_description', 'Snipezon provides custom software, AI solutions, WhatsApp Business API setup, business automation, websites and general item supply services.')
-@section('body_data_page', 'home')
+
+
+@section('page_css')
+  <link rel="stylesheet" href="{{ asset('assets/css/pages/home.css') }}">
+@endsection
+
 
 @section('content')
 <!-- 1. HERO SECTION -->
@@ -315,7 +320,7 @@
 
       <div class="supply-cards-grid">
         <!-- 1. Home Essentials -->
-        <a href="general-supply.html#home-essentials" class="supply-card" data-animate="fade-up">
+        <a href="{{ route('general-supply') }}#home-essentials" class="supply-card" data-animate="fade-up">
           <div class="supply-card-image">
             <img src="{{ asset('assets/images/') }}supply/home-essentials.svg" alt="Home Essentials Category" width="600" height="400" loading="lazy">
           </div>
@@ -330,7 +335,7 @@
         </a>
 
         <!-- 2. Corporate Items -->
-        <a href="general-supply.html#corporate-items" class="supply-card" data-animate="fade-up" data-delay="100">
+        <a href="{{ route('general-supply') }}#corporate-items" class="supply-card" data-animate="fade-up" data-delay="100">
           <div class="supply-card-image">
             <img src="{{ asset('assets/images/') }}supply/corporate-items.svg" alt="Corporate Items Category" width="600" height="400" loading="lazy">
           </div>
@@ -345,7 +350,7 @@
         </a>
 
         <!-- 3. Industrial Items -->
-        <a href="general-supply.html#industrial-items" class="supply-card" data-animate="fade-up" data-delay="200">
+        <a href="{{ route('general-supply') }}#industrial-items" class="supply-card" data-animate="fade-up" data-delay="200">
           <div class="supply-card-image">
             <img src="{{ asset('assets/images/') }}supply/industrial-items.svg" alt="Industrial Items Category" width="600" height="400" loading="lazy">
           </div>
@@ -360,7 +365,7 @@
         </a>
 
         <!-- 4. Toys -->
-        <a href="general-supply.html#toys" class="supply-card" data-animate="fade-up" data-delay="300">
+        <a href="{{ route('general-supply') }}#toys" class="supply-card" data-animate="fade-up" data-delay="300">
           <div class="supply-card-image">
             <img src="{{ asset('assets/images/') }}supply/toys.svg" alt="Toys Category" width="600" height="400" loading="lazy">
           </div>
@@ -550,3 +555,5 @@
       </div>
     </section>
 @endsection
+
+

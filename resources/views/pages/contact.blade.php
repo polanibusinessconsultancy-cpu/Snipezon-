@@ -2,7 +2,12 @@
 
 @section('title', 'Contact &amp; Request a Quote | Snipezon')
 @section('meta_description', 'Contact Snipezon to discuss custom software, AI automation, websites, WhatsApp solutions or a general item supply requirement.')
-@section('body_data_page', 'contact')
+
+
+@section('page_css')
+  <link rel="stylesheet" href="{{ asset('assets/css/pages/contact.css') }}">
+@endsection
+
 
 @section('content')
 <!-- 1. CONTACT HERO -->
@@ -676,3 +681,4 @@
       </div>
     </section>
 @endsection
+

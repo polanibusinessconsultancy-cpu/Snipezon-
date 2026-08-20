@@ -2,7 +2,12 @@
 
 @section('title', 'About Snipezon | Digital Solutions &amp; General Supply')
 @section('meta_description', 'Learn about Snipezon, a company providing custom software, AI-powered digital solutions, business automation, websites and general item supply services.')
-@section('body_data_page', 'about')
+
+
+@section('page_css')
+  <link rel="stylesheet" href="{{ asset('assets/css/pages/about.css') }}">
+@endsection
+
 
 @section('content')
 <!-- 1. ABOUT HERO -->
@@ -580,3 +585,4 @@
       </div>
     </section>
 @endsection
+

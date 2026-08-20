@@ -2,7 +2,13 @@
 
 @section('title', 'Sales Bots for Products & Services | Snipezon')
 @section('meta_description', 'Deploy intelligent sales bots for products and services with Snipezon to qualify leads, answer product queries, and guide buyers to your sales team.')
-@section('body_data_page', 'sales-bots')
+
+
+@section('page_css')
+  <link rel="stylesheet" href="{{ asset('assets/css/pages/home.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/pages/service-details.css') }}">
+@endsection
+
 
 @section('content')
 <!-- 1. BREADCRUMB AND SERVICE HERO -->
@@ -42,7 +48,7 @@
           <div class="arch-ring arch-ring-outer"></div>
 
           <div class="arch-core-hub">
-            <img src="../{{ asset('assets/images/') }}logo/logo-icon.svg" alt="Snipezon Core" width="75" height="75">
+            <img src="{{ asset('assets/images/logo/logo-icon.svg') }}" alt="Snipezon Core" width="75" height="75">
           </div>
 
           <div class="arch-node arch-node-1">
@@ -536,7 +542,7 @@
       </div>
 
       <div class="related-services-grid">
-        <a href="ai-chatbot-solutions.html" class="related-service-card" data-animate="fade-up">
+        <a href="{{ route('services.ai-chatbots') }}" class="related-service-card" data-animate="fade-up">
           <div>
             <h3 class="card-title">AI Chatbot Solutions</h3>
             <p class="card-desc">Grounded AI customer assistants for website and WhatsApp messaging.</p>
@@ -544,7 +550,7 @@
           <span class="req-card-action">Explore Solution &rarr;</span>
         </a>
 
-        <a href="whatsapp-business-api.html" class="related-service-card" data-animate="fade-up" data-delay="100">
+        <a href="{{ route('services.whatsapp-api') }}" class="related-service-card" data-animate="fade-up" data-delay="100">
           <div>
             <h3 class="card-title">WhatsApp Business API Setup</h3>
             <p class="card-desc">Official API integration, multi-agent chat and automated messaging.</p>
@@ -552,7 +558,7 @@
           <span class="req-card-action">Explore Solution &rarr;</span>
         </a>
 
-        <a href="ecommerce-websites.html" class="related-service-card" data-animate="fade-up" data-delay="200">
+        <a href="{{ route('services.ecommerce') }}" class="related-service-card" data-animate="fade-up" data-delay="200">
           <div>
             <h3 class="card-title">E-commerce Websites</h3>
             <p class="card-desc">Modern online storefronts with payment gateway and inventory connections.</p>
@@ -560,7 +566,7 @@
           <span class="req-card-action">Explore Solution &rarr;</span>
         </a>
 
-        <a href="customer-care-automation.html" class="related-service-card" data-animate="fade-up" data-delay="300">
+        <a href="{{ route('services.customer-care') }}" class="related-service-card" data-animate="fade-up" data-delay="300">
           <div>
             <h3 class="card-title">Customer Care Automation</h3>
             <p class="card-desc">Ticket routing, automated replies and support team management.</p>
@@ -664,3 +670,4 @@
       </div>
     </section>
 @endsection
+

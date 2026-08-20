@@ -2,7 +2,12 @@
 
 @section('title', 'Privacy Policy | Snipezon')
 @section('meta_description', 'Privacy Policy for Snipezon static website - Learn how website forms, browser processing, and WhatsApp communications operate.')
-@section('body_data_page', 'privacy-policy')
+
+
+@section('page_css')
+  <link rel="stylesheet" href="{{ asset('assets/css/pages/legal.css') }}">
+@endsection
+
 
 @section('content')
 <section class="section container" style="padding-top: calc(var(--header-height) + 40px); max-width: 900px;" data-animate="fade-up">
@@ -54,3 +59,4 @@
       </div>
     </section>
 @endsection
+

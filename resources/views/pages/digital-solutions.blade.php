@@ -2,7 +2,13 @@
 
 @section('title', 'Digital Solutions | Snipezon')
 @section('meta_description', 'Explore Snipezon’s custom software, AI solutions, WhatsApp Business API, automation, chatbot, accounting, e-commerce and website development services.')
-@section('body_data_page', 'digital-solutions')
+
+
+@section('page_css')
+  <link rel="stylesheet" href="{{ asset('assets/css/pages/home.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/pages/digital-solutions.css') }}">
+@endsection
+
 
 @section('content')
 <!-- 1. HERO SECTION -->
@@ -678,3 +684,4 @@
       </div>
     </section>
 @endsection
+

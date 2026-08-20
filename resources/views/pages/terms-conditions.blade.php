@@ -2,7 +2,12 @@
 
 @section('title', 'Terms &amp; Conditions | Snipezon')
 @section('meta_description', 'Terms and Conditions of Use for the Snipezon static website - General website terms, service inquiries, and liability disclaimers.')
-@section('body_data_page', 'terms-conditions')
+
+
+@section('page_css')
+  <link rel="stylesheet" href="{{ asset('assets/css/pages/legal.css') }}">
+@endsection
+
 
 @section('content')
 <section class="section container" style="padding-top: calc(var(--header-height) + 40px); max-width: 900px;" data-animate="fade-up">
@@ -59,3 +64,4 @@
       </div>
     </section>
 @endsection
+

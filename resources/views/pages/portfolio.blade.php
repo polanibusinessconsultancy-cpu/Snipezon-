@@ -2,7 +2,12 @@
 
 @section('title', 'Portfolio &amp; Case Studies | Snipezon')
 @section('meta_description', 'Explore representative Snipezon solutions across custom software, AI automation, WhatsApp, e-commerce and modern website development.')
-@section('body_data_page', 'portfolio')
+
+
+@section('page_css')
+  <link rel="stylesheet" href="{{ asset('assets/css/pages/portfolio.css') }}">
+@endsection
+
 
 @section('content')
 <!-- 1. PORTFOLIO HERO -->
@@ -794,3 +799,4 @@
       </div>
     </section>
 @endsection
+
