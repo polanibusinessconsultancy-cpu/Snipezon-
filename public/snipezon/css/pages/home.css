@@ -1,0 +1,850 @@
+/* Snipezon Homepage Specific Stylesheet */
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+
+.hero-section {
+  position: relative;
+  min-height: clamp(750px, 85vh, 950px);
+  display: flex;
+  align-items: center;
+  padding-top: calc(var(--header-height) + 20px);
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: clamp(32px, 5vw, 64px);
+  width: 100%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.hero-heading {
+  font-size: var(--font-size-hero);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.hero-heading .highlight-purple {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-description {
+  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+  color: var(--color-text-secondary);
+  margin-bottom: 36px;
+  max-width: 620px;
+}
+
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 44px;
+  flex-wrap: wrap;
+}
+
+.hero-trust-strip {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border-light);
+  width: 100%;
+  max-width: 580px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.trust-item svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--color-cyan);
+}
+
+/* Hero Interactive Orbital Visual */
+.hero-visual-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: transform 300ms ease-out;
+}
+
+.hero-orbital-core {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 2px solid var(--color-primary-light);
+  box-shadow: 0 0 50px rgba(124, 58, 237, 0.4), inset 0 0 30px rgba(34, 211, 238, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.hero-orbital-core img {
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(0 0 16px rgba(155, 108, 255, 0.8));
+}
+
+.orbital-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px stroke rgba(139, 92, 246, 0.25);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.orbital-ring-1 {
+  width: 320px;
+  height: 320px;
+  border: 1px dashed rgba(155, 108, 255, 0.3);
+  animation: spinSlow 40s linear infinite;
+}
+
+.orbital-ring-2 {
+  width: 460px;
+  height: 460px;
+  border: 1px stroke rgba(34, 211, 238, 0.2);
+  animation: spinSlow 60s linear reverse infinite;
+}
+
+.hero-service-node {
+  position: absolute;
+  padding: 8px 14px;
+  background: rgba(11, 20, 38, 0.92);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), var(--shadow-glow);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-text);
+  white-space: nowrap;
+  backdrop-filter: blur(10px);
+  z-index: 4;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.hero-service-node:hover {
+  border-color: var(--color-cyan);
+  transform: scale(1.06);
+}
+
+.hero-service-node svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--color-cyan);
+}
+
+/* Node Positioning in Orbit */
+.node-1 { top: 8%; left: 15%; animation: floatOrb 6s ease-in-out infinite; }
+.node-2 { top: 5%; right: 12%; animation: floatOrb 7s ease-in-out infinite 1s; }
+.node-3 { top: 45%; right: -5%; animation: floatOrb 6.5s ease-in-out infinite 0.5s; }
+.node-4 { bottom: 8%; right: 10%; animation: floatOrb 8s ease-in-out infinite 1.5s; }
+.node-5 { bottom: 5%; left: 18%; animation: floatOrb 7.5s ease-in-out infinite 0.8s; }
+.node-6 { top: 45%; left: -5%; animation: floatOrb 6.2s ease-in-out infinite 1.2s; }
+
+/* ==========================================================================
+   2. BUSINESS CAPABILITY STRIP
+   ========================================================================== */
+
+.capability-strip-section {
+  padding: 30px 0;
+  margin-bottom: clamp(40px, 6vw, 80px);
+}
+
+.capability-glass-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-large);
+  padding: 24px clamp(24px, 4vw, 40px);
+  backdrop-filter: blur(12px);
+}
+
+.capability-text h3 {
+  font-size: 1.15rem;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.capability-text p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.capability-badges-grid {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.capability-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.capability-badge:hover {
+  background: rgba(124, 58, 237, 0.15);
+  border-color: var(--color-primary-light);
+  color: var(--color-text);
+}
+
+.capability-badge svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--color-cyan);
+}
+
+/* ==========================================================================
+   3. DIGITAL SOLUTIONS BENTO GRID
+   ========================================================================== */
+
+.solutions-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gap);
+}
+
+/* Bento Card Span Variations */
+.bento-card-large {
+  grid-column: span 6;
+  min-height: 380px;
+}
+
+.bento-card-medium {
+  grid-column: span 4;
+  min-height: 300px;
+}
+
+.bento-card-small {
+  grid-column: span 3;
+  min-height: 260px;
+}
+
+.bento-card {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-large);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform var(--transition-normal), 
+              border-color var(--transition-normal), 
+              box-shadow var(--transition-normal);
+}
+
+.bento-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+}
+
+.bento-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.bento-icon-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-medium);
+  background: rgba(124, 58, 237, 0.12);
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cyan);
+}
+
+.bento-icon-badge svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.bento-arrow-icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--color-text-muted);
+  stroke-width: 2;
+  transition: stroke var(--transition-fast), transform var(--transition-fast);
+}
+
+.bento-card:hover .bento-arrow-icon {
+  stroke: var(--color-cyan);
+  transform: translateX(4px) translateY(-2px);
+}
+
+.bento-title {
+  font-size: clamp(1.15rem, 1.5vw, 1.4rem);
+  margin-bottom: 12px;
+}
+
+.bento-description {
+  font-size: 0.925rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Feature Micro UI Mockups */
+.bento-card-preview {
+  margin-top: 20px;
+  border-radius: var(--radius-medium);
+  background: rgba(7, 16, 31, 0.8);
+  border: 1px solid var(--color-border-light);
+  padding: 16px;
+  height: 140px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bento-code-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.code-line {
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.code-line.w-80 { width: 80%; background: var(--color-primary-light); opacity: 0.7; }
+.code-line.w-60 { width: 60%; background: var(--color-cyan); opacity: 0.6; }
+.code-line.w-90 { width: 90%; }
+.code-line.w-40 { width: 40%; }
+
+/* ==========================================================================
+   4. DEVELOPMENT PROCESS TIMELINE
+   ========================================================================== */
+
+.process-section {
+  padding: var(--section-space) 0;
+  position: relative;
+}
+
+.process-timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.process-timeline::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-primary), var(--color-cyan));
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.process-step {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.process-step-number {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 2px solid var(--color-primary-light);
+  color: var(--color-cyan);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+}
+
+.process-step-title {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.process-step-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  max-width: 200px;
+}
+
+/* ==========================================================================
+   5. GENERAL SUPPLY DIVISION SECTION
+   ========================================================================== */
+
+.supply-section {
+  padding: var(--section-space) 0;
+}
+
+.supply-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gap);
+  margin-bottom: 40px;
+}
+
+.supply-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
+  text-decoration: none;
+}
+
+.supply-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-cyan);
+}
+
+.supply-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--color-bg-secondary);
+  overflow: hidden;
+}
+
+.supply-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.supply-card:hover .supply-card-image img {
+  transform: scale(1.05);
+}
+
+.supply-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.supply-card-title {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.supply-card-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.supply-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+}
+
+/* ==========================================================================
+   6. SELECTED WORK SECTION
+   ========================================================================== */
+
+.work-section {
+  padding: var(--section-space) 0;
+}
+
+.work-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+  margin-bottom: 40px;
+}
+
+.work-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-large);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
+  text-decoration: none;
+}
+
+.work-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-primary-light);
+}
+
+.work-card-preview {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--color-bg-tertiary);
+  overflow: hidden;
+}
+
+.work-card-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.work-card:hover .work-card-preview img {
+  transform: scale(1.04);
+}
+
+.work-card-body {
+  padding: 24px;
+}
+
+.work-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.work-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-cyan);
+  background: rgba(34, 211, 238, 0.08);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.work-card-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.work-card-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
+   7. WHY SNIPEZON SECTION
+   ========================================================================== */
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  padding: 24px 20px;
+  text-align: center;
+  transition: border-color var(--transition-fast);
+}
+
+.why-card:hover {
+  border-color: var(--color-primary-light);
+}
+
+.why-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--color-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+
+.why-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.why-title {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.why-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
+   8. CLIENT VOICES FRAMEWORK
+   ========================================================================== */
+
+.voices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+}
+
+.voice-card {
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-medium);
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.voice-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+
+.voice-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.voice-title {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.voice-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
+   9. FINAL CTA BANNER
+   ========================================================================== */
+
+.final-cta-section {
+  padding: var(--section-space) 0;
+}
+
+.cta-glass-banner {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.25) 0%, rgba(79, 70, 229, 0.15) 100%), var(--color-surface);
+  border: 1px solid var(--color-primary-light);
+  border-radius: var(--radius-large);
+  padding: clamp(40px, 6vw, 80px) clamp(24px, 4vw, 40px);
+  text-align: center;
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner-title {
+  font-size: var(--font-size-h1);
+  margin-bottom: 16px;
+}
+
+.cta-banner-desc {
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto 36px auto;
+}
+
+.cta-banner-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   RESPONSIVE HOMEPAGE BREAKPOINTS & REDUCED MOTION OVERRIDES
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .bento-card-large { grid-column: span 12; }
+  .bento-card-medium { grid-column: span 6; }
+  .bento-card-small { grid-column: span 6; }
+  .why-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-trust-strip {
+    justify-content: center;
+  }
+
+  .hero-visual-wrapper {
+    max-width: 400px;
+    margin-top: 40px;
+  }
+
+  .capability-glass-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .supply-cards-grid, .work-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bento-card-medium, .bento-card-small {
+    grid-column: span 12;
+  }
+
+  .process-timeline {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .process-timeline::before {
+    display: none;
+  }
+
+  .why-grid, .voices-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .supply-cards-grid, .work-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-orbital-core {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero-orbital-core img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .orbital-ring-1 { width: 240px; height: 240px; }
+  .orbital-ring-2 { width: 340px; height: 340px; }
+
+  /* Mobile orbital visual simplification to prevent congestion */
+  .hero-service-node {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+
+  .node-4, .node-5, .node-6 {
+    display: none;
+  }
+
+  .node-1 { top: 0%; left: 5%; }
+  .node-2 { top: 0%; right: 5%; }
+  .node-3 { bottom: 0%; left: 50%; transform: translateX(-50%); }
+}
+
+@media (max-width: 430px) {
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-ctas .button {
+    width: 100%;
+  }
+
+  .hero-trust-strip {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  .orbital-ring-1, .orbital-ring-2,
+  .node-1, .node-2, .node-3, .node-4, .node-5, .node-6 {
+    animation: none !important;
+  }
+
+  .hero-visual-wrapper {
+    transform: none !important;
+  }
+}
