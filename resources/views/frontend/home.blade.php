@@ -1,4 +1,4 @@
-﻿@extends('frontend.layouts.app')
+@extends('frontend.layouts.app')
 
 @section('title', 'Snipezon | Smart Digital Solutions Powered by AI')
 @section('meta_description', 'Snipezon provides custom software, AI solutions, WhatsApp Business API setup, business automation, websites and general item supply services.')
@@ -21,11 +21,11 @@
             From custom software and websites to AI automation and reliable general item procurement—everything your business needs under one trusted partner.
           </p>
           <div class="hero-ctas" data-animate="fade-up" data-delay="300">
-            <span class="button button-primary is-disabled" aria-disabled="true">
+            <a class="button button-primary" aria-disabled="true">
               <span>Start a Project</span>
               <svg class="button-icon-svg button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <span class="button button-secondary is-disabled" aria-disabled="true">
+            <a href="digital-solutions.html" class="button button-secondary">
               <span>Explore Solutions</span>
               <svg class="button-icon-svg button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -131,7 +131,7 @@
 
       <div class="solutions-bento-grid">
         <!-- 1. Custom Software (Featured Large) -->
-        <div class="bento-card bento-card-large" data-animate="fade-up">
+        <a href="services/custom-software-development.html" class="bento-card bento-card-large" data-animate="fade-up">
           <div>
             <div class="bento-card-header">
               <div class="bento-icon-badge">
@@ -153,7 +153,7 @@
         </a>
 
         <!-- 2. AI-Based Software Solutions (Featured Large) -->
-        <div class="bento-card bento-card-large" data-animate="fade-up" data-delay="100">
+        <a href="services/ai-software-solutions.html" class="bento-card bento-card-large" data-animate="fade-up" data-delay="100">
           <div>
             <div class="bento-card-header">
               <div class="bento-icon-badge">
@@ -173,7 +173,7 @@
         </a>
 
         <!-- 3. WhatsApp Business API -->
-        <div class="bento-card bento-card-medium" data-animate="fade-up">
+        <a href="services/whatsapp-business-api.html" class="bento-card bento-card-medium" data-animate="fade-up">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
@@ -187,7 +187,7 @@
         </a>
 
         <!-- 4. Customer Care Automation -->
-        <div class="bento-card bento-card-medium" data-animate="fade-up" data-delay="100">
+        <a href="services/customer-care-automation.html" class="bento-card bento-card-medium" data-animate="fade-up" data-delay="100">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
@@ -201,7 +201,7 @@
         </a>
 
         <!-- 5. Sales Bots -->
-        <div class="bento-card bento-card-medium" data-animate="fade-up" data-delay="200">
+        <a href="services/sales-bots.html" class="bento-card bento-card-medium" data-animate="fade-up" data-delay="200">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2zM14 8l3 3m0 0h-3m3 0V8"/></svg>
@@ -215,7 +215,7 @@
         </a>
 
         <!-- 6. Full AI Chatbots -->
-        <div class="bento-card bento-card-small" data-animate="fade-up">
+        <a href="services/ai-chatbot-solutions.html" class="bento-card bento-card-small" data-animate="fade-up">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm-6 9a6 6 0 0 1 12 0v5a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-5zM9 13h.01M15 13h.01M9 16h6"/></svg>
@@ -229,7 +229,7 @@
         </a>
 
         <!-- 7. Accounting Software -->
-        <div class="bento-card bento-card-small" data-animate="fade-up" data-delay="100">
+        <a href="services/accounting-software.html" class="bento-card bento-card-small" data-animate="fade-up" data-delay="100">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/><line x1="14" y1="18" x2="16" y2="18"/></svg>
@@ -243,7 +243,7 @@
         </a>
 
         <!-- 8. E-commerce Websites -->
-        <div class="bento-card bento-card-small" data-animate="fade-up" data-delay="200">
+        <a href="services/ecommerce-websites.html" class="bento-card bento-card-small" data-animate="fade-up" data-delay="200">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
@@ -257,7 +257,7 @@
         </a>
 
         <!-- 9. Static & Dynamic Websites -->
-        <div class="bento-card bento-card-small" data-animate="fade-up" data-delay="300">
+        <a href="services/static-dynamic-websites.html" class="bento-card bento-card-small" data-animate="fade-up" data-delay="300">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/><circle cx="6" cy="6" r="1" fill="currentColor"/><circle cx="10" cy="6" r="1" fill="currentColor"/></svg>
@@ -319,7 +319,7 @@
 
       <div class="supply-cards-grid">
         <!-- 1. Home Essentials -->
-        <div id="home-essentials" class="supply-card" data-animate="fade-up">
+        <a href="general-supply.html#home-essentials" class="supply-card" data-animate="fade-up">
           <div class="supply-card-image">
             <img src="{{ asset('snipezon/images/supply/home-essentials.svg') }}" alt="Home Essentials Category" width="600" height="400" loading="lazy">
           </div>
@@ -331,8 +331,10 @@
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </span>
           </div>
-        </div><!-- 2. Corporate Items -->
-        <div id="corporate-items" class="supply-card" data-animate="fade-up" data-delay="100">
+        </a>
+
+        <!-- 2. Corporate Items -->
+        <a href="general-supply.html#corporate-items" class="supply-card" data-animate="fade-up" data-delay="100">
           <div class="supply-card-image">
             <img src="{{ asset('snipezon/images/supply/corporate-items.svg') }}" alt="Corporate Items Category" width="600" height="400" loading="lazy">
           </div>
@@ -344,8 +346,10 @@
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </span>
           </div>
-        </div><!-- 3. Industrial Items -->
-        <div id="industrial-items" class="supply-card" data-animate="fade-up" data-delay="200">
+        </a>
+
+        <!-- 3. Industrial Items -->
+        <a href="general-supply.html#industrial-items" class="supply-card" data-animate="fade-up" data-delay="200">
           <div class="supply-card-image">
             <img src="{{ asset('snipezon/images/supply/industrial-items.svg') }}" alt="Industrial Items Category" width="600" height="400" loading="lazy">
           </div>
@@ -357,8 +361,10 @@
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </span>
           </div>
-        </div><!-- 4. Toys -->
-        <div id="toys" class="supply-card" data-animate="fade-up" data-delay="300">
+        </a>
+
+        <!-- 4. Toys -->
+        <a href="general-supply.html#toys" class="supply-card" data-animate="fade-up" data-delay="300">
           <div class="supply-card-image">
             <img src="{{ asset('snipezon/images/supply/toys.svg') }}" alt="Toys Category" width="600" height="400" loading="lazy">
           </div>
@@ -391,7 +397,7 @@
 
       <div class="work-cards-grid">
         <!-- Project 1 -->
-        <div class="work-card" data-animate="fade-up">
+        <a href="portfolio.html" class="work-card" data-animate="fade-up">
           <div class="work-card-preview">
             <img src="{{ asset('snipezon/images/portfolio/business-automation.svg') }}" alt="Business Automation Platform Preview" width="600" height="360" loading="lazy">
           </div>
@@ -406,7 +412,7 @@
         </a>
 
         <!-- Project 2 -->
-        <div class="work-card" data-animate="fade-up" data-delay="100">
+        <a href="portfolio.html" class="work-card" data-animate="fade-up" data-delay="100">
           <div class="work-card-preview">
             <img src="{{ asset('snipezon/images/portfolio/ecommerce-platform.svg') }}" alt="Modern E-commerce Experience Preview" width="600" height="360" loading="lazy">
           </div>
@@ -421,7 +427,7 @@
         </a>
 
         <!-- Project 3 -->
-        <div class="work-card" data-animate="fade-up" data-delay="200">
+        <a href="portfolio.html" class="work-card" data-animate="fade-up" data-delay="200">
           <div class="work-card-preview">
             <img src="{{ asset('snipezon/images/portfolio/ai-support-workspace.svg') }}" alt="AI Customer Support System Preview" width="600" height="360" loading="lazy">
           </div>
@@ -437,7 +443,7 @@
       </div>
 
       <div style="text-align: center;" data-animate="fade-up">
-        <a href="portfolio.html" class="button button-primary">
+        <a class="button button-primary" aria-disabled="true">
           <span>View All Work</span>
           <svg class="button-icon-svg button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -536,7 +542,7 @@
         <h2 class="cta-banner-title text-gradient">Let’s build what your business needs next.</h2>
         <p class="cta-banner-desc">Share your ideas or requirement details, and we’ll turn them into reliable, scalable digital solutions.</p>
         <div class="cta-banner-actions">
-          <span class="button button-primary is-disabled" aria-disabled="true">
+          <a class="button button-primary" aria-disabled="true">
             <span>Book a Consultation</span>
             <svg class="button-icon-svg button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
@@ -548,4 +554,3 @@
       </div>
     </section>
 @endsection
-

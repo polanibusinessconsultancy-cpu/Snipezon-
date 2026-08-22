@@ -12,6 +12,10 @@ Route::get('/about', function () {
     return view('frontend.about');
 })->name('about');
 
+Route::get('/digital-solutions', function () {
+    return view('frontend.digital-solutions');
+})->name('digital-solutions');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

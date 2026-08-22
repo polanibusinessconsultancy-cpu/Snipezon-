@@ -7,6 +7,8 @@
 @section('page_css')
   <link rel="stylesheet" href="{{ asset('snipezon/css/pages/home.css') }}">
   <link rel="stylesheet" href="{{ asset('snipezon/css/pages/about.css') }}">
+  <link rel="stylesheet" href="{{ asset('snipezon/css/pages/digital-solutions.css') }}">
+  <link rel="stylesheet" href="{{ asset('snipezon/css/pages/general-supply.css') }}">
 @endsection
 
 @section('content')
@@ -29,14 +31,14 @@
             Snipezon brings technology, AI-driven solutions, business automation and reliable general item sourcing together under one focused company.
           </p>
           <div class="hero-ctas" data-animate="fade-up" data-delay="300">
-            <span class="button button-primary is-disabled" aria-disabled="true">
+            <a class="button button-primary" aria-disabled="true">
               <span>Explore Our Solutions</span>
               <svg class="button-icon-svg button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-            <span class="button button-secondary is-disabled" aria-disabled="true">
+            </a>
+            <a class="button button-secondary" aria-disabled="true">
               <span>Talk to Us</span>
               <svg class="button-icon-svg button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
+            </a>
           </div>
         </div>
 
@@ -198,10 +200,10 @@
             </div>
           </div>
 
-          <span class="button button-primary is-disabled" aria-disabled="true" style="align-self: flex-start;">
+          <a class="button button-primary" style="align-self: flex-start;" aria-disabled="true">
             <span>Explore Digital Solutions</span>
             <svg class="button-icon-svg button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </span>
+          </a>
         </div>
 
         <!-- Division B: General Supply -->
@@ -221,10 +223,10 @@
             </div>
           </div>
 
-          <span class="button button-secondary is-disabled" aria-disabled="true" style="align-self: flex-start;">
+          <a class="button button-secondary" style="align-self: flex-start;" aria-disabled="true">
             <span>Explore Supply Division</span>
             <svg class="button-icon-svg button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </span>
+          </a>
         </div>
       </div>
     </section>
@@ -390,7 +392,7 @@
           </div>
           <h3 class="req-card-title">Digitize Operations</h3>
           <p class="req-card-desc">Replace manual spreadsheets with custom software platforms and accounting ledger systems.</p>
-          <span class="req-card-action is-disabled" aria-disabled="true">Explore Solutions &rarr;</span>
+          <a class="req-card-action" aria-disabled="true">Explore Solutions &rarr;</a>
         </div>
 
         <div class="requirement-group-card" data-animate="fade-up" data-delay="100">
@@ -399,7 +401,7 @@
           </div>
           <h3 class="req-card-title">Automate Customer Interaction</h3>
           <p class="req-card-desc">Implement WhatsApp Business API, AI customer care bots, and sales inquiry assistants.</p>
-          <span class="req-card-action is-disabled" aria-disabled="true">Explore Solutions &rarr;</span>
+          <a class="req-card-action" aria-disabled="true">Explore Solutions &rarr;</a>
         </div>
 
         <div class="requirement-group-card" data-animate="fade-up" data-delay="200">
@@ -408,7 +410,7 @@
           </div>
           <h3 class="req-card-title">Build Modern Web Experiences</h3>
           <p class="req-card-desc">Develop fast, accessible corporate websites and modern e-commerce storefronts.</p>
-          <span class="req-card-action is-disabled" aria-disabled="true">Explore Solutions &rarr;</span>
+          <a class="req-card-action" aria-disabled="true">Explore Solutions &rarr;</a>
         </div>
 
         <div class="requirement-group-card" data-animate="fade-up" data-delay="300">
@@ -417,7 +419,7 @@
           </div>
           <h3 class="req-card-title">Improve Business Visibility</h3>
           <p class="req-card-desc">Gain real-time analytical reports and operational dashboard insights.</p>
-          <span class="req-card-action is-disabled" aria-disabled="true">Explore Solutions &rarr;</span>
+          <a class="req-card-action" aria-disabled="true">Explore Solutions &rarr;</a>
         </div>
 
         <div class="requirement-group-card" data-animate="fade-up">
@@ -426,7 +428,7 @@
           </div>
           <h3 class="req-card-title">Source Essential Items</h3>
           <p class="req-card-desc">Consolidate corporate stationery, IT accessories, safety PPE, and home supplies.</p>
-          <span class="req-card-action is-disabled" aria-disabled="true">Explore Supply &rarr;</span>
+          <a class="req-card-action" aria-disabled="true">Explore Supply &rarr;</a>
         </div>
 
         <div class="requirement-group-card" data-animate="fade-up" data-delay="100">
@@ -435,7 +437,7 @@
           </div>
           <h3 class="req-card-title">Coordinate Diverse Requirements</h3>
           <p class="req-card-desc">Streamline multi-category procurement through one single point of contact.</p>
-          <span class="req-card-action is-disabled" aria-disabled="true">Explore Supply &rarr;</span>
+          <a class="req-card-action" aria-disabled="true">Explore Supply &rarr;</a>
         </div>
       </div>
     </section>
@@ -573,10 +575,10 @@
         <h2 class="cta-banner-title text-gradient">Let’s build a smarter way forward.</h2>
         <p class="cta-banner-desc">Whether you need a digital system, business automation or general item sourcing, start the conversation with Snipezon.</p>
         <div class="cta-banner-actions">
-          <span class="button button-primary is-disabled" aria-disabled="true">
+          <a class="button button-primary" aria-disabled="true">
             <span>Discuss Your Requirement</span>
             <svg class="button-icon-svg button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </span>
+          </a>
           <a href="https://wa.me/923122261919?text=Hello%20Snipezon%2C%20I%20would%20like%20to%20discuss%20a%20requirement." class="button button-whatsapp" target="_blank" rel="noopener noreferrer">
             <svg class="button-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.142-1.086z"/></svg>
             <span>WhatsApp Us</span>
