@@ -6,6 +6,9 @@
   <title>@yield('title', 'Snipezon | Smart Digital Solutions Powered by AI')</title>
   <meta name="description" content="@yield('meta_description', 'Snipezon provides custom software, AI solutions, WhatsApp Business API setup, business automation, websites and general item supply services.')">
   <meta name="theme-color" content="#030712">
+  @hasSection('meta_robots')
+    @yield('meta_robots')
+  @endif
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="@yield('og_title', 'Snipezon | Smart Digital Solutions Powered by AI')">
@@ -58,44 +61,44 @@
               <svg class="dropdown-arrow" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg>
             </button>
             <div class="nav-dropdown" aria-label="Digital Solutions Submenu">
-              <span class="dropdown-header-link is-disabled" aria-disabled="true">
+              <a href="{{ route('digital-solutions') }}" class="dropdown-header-link" data-nav="digital-solutions">
                 View All Digital Solutions
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
+              </a>
               <div class="dropdown-list">
-                <span class="dropdown-link is-disabled" aria-disabled="true" data-nav="custom-software-development">Custom Software Development</span>
-                <span class="dropdown-link is-disabled" aria-disabled="true" data-nav="ai-software-solutions">AI-Based Software Solutions</span>
-                <span class="dropdown-link is-disabled" aria-disabled="true" data-nav="whatsapp-business-api">WhatsApp Business API Setup</span>
-                <span class="dropdown-link is-disabled" aria-disabled="true" data-nav="customer-care-automation">Customer Care Automation</span>
-                <span class="dropdown-link is-disabled" aria-disabled="true" data-nav="sales-bots">Sales Bots for Products & Services</span>
-                <span class="dropdown-link is-disabled" aria-disabled="true" data-nav="ai-chatbot-solutions">Full AI Chatbot Solutions</span>
-                <span class="dropdown-link is-disabled" aria-disabled="true" data-nav="accounting-software">Accounting Software</span>
-                <span class="dropdown-link is-disabled" aria-disabled="true" data-nav="ecommerce-websites">E-commerce Websites</span>
-                <span class="dropdown-link is-disabled" aria-disabled="true" data-nav="static-dynamic-websites">Static & Dynamic Websites</span>
+                <a href="{{ route('services.custom-software-development') }}" class="dropdown-link" data-nav="custom-software-development">Custom Software Development</a>
+                <a href="{{ route('services.ai-software-solutions') }}" class="dropdown-link" data-nav="ai-software-solutions">AI-Based Software Solutions</a>
+                <a href="{{ route('services.whatsapp-business-api') }}" class="dropdown-link" data-nav="whatsapp-business-api">WhatsApp Business API Setup</a>
+                <a href="{{ route('services.customer-care-automation') }}" class="dropdown-link" data-nav="customer-care-automation">Customer Care Automation</a>
+                <a href="{{ route('services.sales-bots') }}" class="dropdown-link" data-nav="sales-bots">Sales Bots for Products & Services</a>
+                <a href="{{ route('services.ai-chatbot-solutions') }}" class="dropdown-link" data-nav="ai-chatbot-solutions">Full AI Chatbot Solutions</a>
+                <a href="{{ route('services.accounting-software') }}" class="dropdown-link" data-nav="accounting-software">Accounting Software</a>
+                <a href="{{ route('services.ecommerce-websites') }}" class="dropdown-link" data-nav="ecommerce-websites">E-commerce Websites</a>
+                <a href="{{ route('services.static-dynamic-websites') }}" class="dropdown-link" data-nav="static-dynamic-websites">Static & Dynamic Websites</a>
               </div>
             </div>
           </li>
           <li class="nav-item">
-            <span class="nav-link is-disabled" aria-disabled="true" data-nav="general-supply">Supply Division</span>
+            <a href="{{ route('general-supply') }}" class="nav-link" data-nav="general-supply">Supply Division</a>
           </li>
           <li class="nav-item">
-            <span class="nav-link is-disabled" aria-disabled="true" data-nav="portfolio">Work</span>
+            <a href="{{ route('portfolio') }}" class="nav-link" data-nav="portfolio">Work</a>
           </li>
           <li class="nav-item">
             <a href="{{ route('about') }}" class="nav-link" data-nav="about">About</a>
           </li>
           <li class="nav-item">
-            <span class="nav-link is-disabled" aria-disabled="true" data-nav="contact">Contact</span>
+            <a href="{{ route('contact') }}" class="nav-link" data-nav="contact">Contact</a>
           </li>
         </ul>
       </nav>
 
       <!-- Header Actions -->
       <div class="header-actions">
-        <span class="button button-primary is-disabled" aria-disabled="true">
+        <a href="{{ route('contact') }}" class="button button-primary">
           <span>Let’s Talk</span>
           <svg class="button-icon-svg button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </span>
+        </a>
         <button class="hamburger-btn" aria-label="Toggle Mobile Navigation" aria-expanded="false" aria-controls="mobile-drawer">
           <span></span><span></span><span></span>
         </button>
@@ -123,29 +126,29 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <ul class="mobile-submenu">
-            <li><span class="mobile-submenu-link is-disabled" aria-disabled="true">View All Solutions</span></li>
-            <li><span class="mobile-submenu-link is-disabled" aria-disabled="true" data-nav="custom-software-development">Custom Software Development</span></li>
-            <li><span class="mobile-submenu-link is-disabled" aria-disabled="true" data-nav="ai-software-solutions">AI-Based Software Solutions</span></li>
-            <li><span class="mobile-submenu-link is-disabled" aria-disabled="true" data-nav="whatsapp-business-api">WhatsApp Business API Setup</span></li>
-            <li><span class="mobile-submenu-link is-disabled" aria-disabled="true" data-nav="customer-care-automation">Customer Care Automation</span></li>
-            <li><span class="mobile-submenu-link is-disabled" aria-disabled="true" data-nav="sales-bots">Sales Bots</span></li>
-            <li><span class="mobile-submenu-link is-disabled" aria-disabled="true" data-nav="ai-chatbot-solutions">AI Chatbot Solutions</span></li>
-            <li><span class="mobile-submenu-link is-disabled" aria-disabled="true" data-nav="accounting-software">Accounting Software</span></li>
-            <li><span class="mobile-submenu-link is-disabled" aria-disabled="true" data-nav="ecommerce-websites">E-commerce Websites</span></li>
-            <li><span class="mobile-submenu-link is-disabled" aria-disabled="true" data-nav="static-dynamic-websites">Static & Dynamic Websites</span></li>
+            <li><a href="{{ route('digital-solutions') }}" class="mobile-submenu-link" data-nav="digital-solutions">View All Solutions</a></li>
+            <li><a href="{{ route('services.custom-software-development') }}" class="mobile-submenu-link" data-nav="custom-software-development">Custom Software Development</a></li>
+            <li><a href="{{ route('services.ai-software-solutions') }}" class="mobile-submenu-link" data-nav="ai-software-solutions">AI-Based Software Solutions</a></li>
+            <li><a href="{{ route('services.whatsapp-business-api') }}" class="mobile-submenu-link" data-nav="whatsapp-business-api">WhatsApp Business API Setup</a></li>
+            <li><a href="{{ route('services.customer-care-automation') }}" class="mobile-submenu-link" data-nav="customer-care-automation">Customer Care Automation</a></li>
+            <li><a href="{{ route('services.sales-bots') }}" class="mobile-submenu-link" data-nav="sales-bots">Sales Bots</a></li>
+            <li><a href="{{ route('services.ai-chatbot-solutions') }}" class="mobile-submenu-link" data-nav="ai-chatbot-solutions">AI Chatbot Solutions</a></li>
+            <li><a href="{{ route('services.accounting-software') }}" class="mobile-submenu-link" data-nav="accounting-software">Accounting Software</a></li>
+            <li><a href="{{ route('services.ecommerce-websites') }}" class="mobile-submenu-link" data-nav="ecommerce-websites">E-commerce Websites</a></li>
+            <li><a href="{{ route('services.static-dynamic-websites') }}" class="mobile-submenu-link" data-nav="static-dynamic-websites">Static & Dynamic Websites</a></li>
           </ul>
         </li>
-        <li><span class="mobile-nav-link is-disabled" aria-disabled="true" data-nav="general-supply">Supply Division</span></li>
-        <li><span class="mobile-nav-link is-disabled" aria-disabled="true" data-nav="portfolio">Work</span></li>
+        <li><a href="{{ route('general-supply') }}" class="mobile-nav-link" data-nav="general-supply">Supply Division</a></li>
+        <li><a href="{{ route('portfolio') }}" class="mobile-nav-link" data-nav="portfolio">Work</a></li>
         <li><a href="{{ route('about') }}" class="mobile-nav-link" data-nav="about">About</a></li>
-        <li><span class="mobile-nav-link is-disabled" aria-disabled="true" data-nav="contact">Contact</span></li>
+        <li><a href="{{ route('contact') }}" class="mobile-nav-link" data-nav="contact">Contact</a></li>
       </ul>
     </nav>
     <div class="mobile-drawer-footer">
-      <span class="button button-primary is-disabled" aria-disabled="true">
+      <a href="{{ route('contact') }}" class="button button-primary">
         <span>Let’s Talk</span>
         <svg class="button-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </span>
+      </a>
       <a href="https://wa.me/923122261919?text=Hello%20Snipezon%2C%20I%20would%20like%20to%20discuss%20a%20requirement." class="button button-whatsapp" target="_blank" rel="noopener noreferrer">
         <svg class="button-icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.142-1.086z"/></svg>
         <span>WhatsApp Support</span>
@@ -200,15 +203,15 @@
         <div>
           <h3 class="footer-heading">Digital Solutions</h3>
           <ul class="footer-links">
-            <li><span class="footer-link-disabled" aria-disabled="true">Custom Software Development</span></li>
-            <li><span class="footer-link-disabled" aria-disabled="true">AI Software Solutions</span></li>
-            <li><span class="footer-link-disabled" aria-disabled="true">WhatsApp Business API</span></li>
-            <li><span class="footer-link-disabled" aria-disabled="true">Customer Care Automation</span></li>
-            <li><span class="footer-link-disabled" aria-disabled="true">Sales Bots</span></li>
-            <li><span class="footer-link-disabled" aria-disabled="true">AI Chatbot Solutions</span></li>
-            <li><span class="footer-link-disabled" aria-disabled="true">Accounting Software</span></li>
-            <li><span class="footer-link-disabled" aria-disabled="true">E-commerce Websites</span></li>
-            <li><span class="footer-link-disabled" aria-disabled="true">Static & Dynamic Websites</span></li>
+            <li><a href="{{ route('services.custom-software-development') }}">Custom Software Development</a></li>
+            <li><a href="{{ route('services.ai-software-solutions') }}">AI Software Solutions</a></li>
+            <li><a href="{{ route('services.whatsapp-business-api') }}">WhatsApp Business API</a></li>
+            <li><a href="{{ route('services.customer-care-automation') }}">Customer Care Automation</a></li>
+            <li><a href="{{ route('services.sales-bots') }}">Sales Bots</a></li>
+            <li><a href="{{ route('services.ai-chatbot-solutions') }}">AI Chatbot Solutions</a></li>
+            <li><a href="{{ route('services.accounting-software') }}">Accounting Software</a></li>
+            <li><a href="{{ route('services.ecommerce-websites') }}">E-commerce Websites</a></li>
+            <li><a href="{{ route('services.static-dynamic-websites') }}">Static & Dynamic Websites</a></li>
           </ul>
         </div>
 
@@ -247,8 +250,8 @@
       <div class="footer-bottom">
         <p>&copy; <span id="current-year">2026</span> Snipezon. All rights reserved.</p>
         <div class="footer-bottom-links">
-          <span class="footer-link-disabled" aria-disabled="true">Privacy Policy</span>
-          <span class="footer-link-disabled" aria-disabled="true">Terms of Service</span>
+          <a href="{{ route('privacy-policy') }}">Privacy Policy</a>
+          <a href="{{ route('terms-conditions') }}">Terms & Conditions</a>
         </div>
       </div>
     </div>

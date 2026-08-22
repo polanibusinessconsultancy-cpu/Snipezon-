@@ -29,11 +29,11 @@
             From custom software and AI automation to intelligent customer experiences, we design practical digital systems that help businesses operate, serve and scale better.
           </p>
           <div class="hero-ctas" data-animate="fade-up" data-delay="300">
-            <a class="button button-primary" aria-disabled="true">
+            <a class="button button-primary" aria-disabled="true" tabindex="-1">
               <span>Discuss Your Project</span>
               <svg class="button-icon-svg button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a class="button button-secondary" aria-disabled="true">
+            <a class="button button-secondary" aria-disabled="true" tabindex="-1">
               <span>View Our Work</span>
               <svg class="button-icon-svg button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -167,7 +167,7 @@
 
       <div class="solutions-bento-grid">
         <!-- 1. Custom Software Development -->
-        <a href="services/custom-software-development.html" class="bento-card bento-card-large" data-animate="fade-up">
+        <a href="{{ route('services.custom-software-development') }}" class="bento-card bento-card-large" data-animate="fade-up">
           <div>
             <div class="bento-card-header">
               <div class="bento-icon-badge">
@@ -189,7 +189,7 @@
         </a>
 
         <!-- 2. AI-Based Software Solutions -->
-        <a href="services/ai-software-solutions.html" class="bento-card bento-card-large" data-animate="fade-up" data-delay="100">
+        <a href="{{ route('services.ai-software-solutions') }}" class="bento-card bento-card-large" data-animate="fade-up" data-delay="100">
           <div>
             <div class="bento-card-header">
               <div class="bento-icon-badge">
@@ -209,7 +209,7 @@
         </a>
 
         <!-- 3. WhatsApp Business API -->
-        <a href="services/whatsapp-business-api.html" class="bento-card bento-card-medium" data-animate="fade-up">
+        <a href="{{ route('services.whatsapp-business-api') }}" class="bento-card bento-card-medium" data-animate="fade-up">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.142-1.086z"/></svg>
@@ -223,7 +223,7 @@
         </a>
 
         <!-- 4. Customer Care Automation -->
-        <a href="services/customer-care-automation.html" class="bento-card bento-card-medium" data-animate="fade-up" data-delay="100">
+        <a href="{{ route('services.customer-care-automation') }}" class="bento-card bento-card-medium" data-animate="fade-up" data-delay="100">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
@@ -237,7 +237,7 @@
         </a>
 
         <!-- 5. Sales Bots -->
-        <a href="services/sales-bots.html" class="bento-card bento-card-medium" data-animate="fade-up" data-delay="200">
+        <a href="{{ route('services.sales-bots') }}" class="bento-card bento-card-medium" data-animate="fade-up" data-delay="200">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
@@ -251,7 +251,7 @@
         </a>
 
         <!-- 6. Full AI Chatbot Solutions -->
-        <a href="services/ai-chatbot-solutions.html" class="bento-card bento-card-small" data-animate="fade-up">
+        <a href="{{ route('services.ai-chatbot-solutions') }}" class="bento-card bento-card-small" data-animate="fade-up">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 7a8 8 0 0 0-8 8v3h16v-3a8 8 0 0 0-8-8z"/></svg>
@@ -265,7 +265,7 @@
         </a>
 
         <!-- 7. Accounting Software -->
-        <a href="services/accounting-software.html" class="bento-card bento-card-small" data-animate="fade-up" data-delay="100">
+        <a href="{{ route('services.accounting-software') }}" class="bento-card bento-card-small" data-animate="fade-up" data-delay="100">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
@@ -279,7 +279,7 @@
         </a>
 
         <!-- 8. E-commerce Websites -->
-        <a href="services/ecommerce-websites.html" class="bento-card bento-card-small" data-animate="fade-up" data-delay="200">
+        <a href="{{ route('services.ecommerce-websites') }}" class="bento-card bento-card-small" data-animate="fade-up" data-delay="200">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1z"/></svg>
@@ -293,7 +293,7 @@
         </a>
 
         <!-- 9. Static & Dynamic Websites -->
-        <a href="services/static-dynamic-websites.html" class="bento-card bento-card-small" data-animate="fade-up" data-delay="300">
+        <a href="{{ route('services.static-dynamic-websites') }}" class="bento-card bento-card-small" data-animate="fade-up" data-delay="300">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
@@ -531,7 +531,7 @@
       </div>
 
       <div style="text-align: center;" data-animate="fade-up">
-        <a class="button button-primary" aria-disabled="true">
+        <a class="button button-primary" aria-disabled="true" tabindex="-1">
           <span>See All Work</span>
           <svg class="button-icon-svg button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -671,7 +671,7 @@
         <h2 class="cta-banner-title text-gradient">Have a digital challenge? Let’s solve it together.</h2>
         <p class="cta-banner-desc">Share your requirement and let’s explore a reliable, scalable and intelligent solution.</p>
         <div class="cta-banner-actions">
-          <a class="button button-primary" aria-disabled="true">
+          <a class="button button-primary" aria-disabled="true" tabindex="-1">
             <span>Book a Consultation</span>
             <svg class="button-icon-svg button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>

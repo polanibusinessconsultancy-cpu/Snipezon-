@@ -196,7 +196,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (preselectVal) {
-          const targetSelect = document.getElementById('contact-digital-service') || document.getElementById('contact-supply-cat');
+          const targetSelect = (targetTabId === 'tab-supply')
+            ? document.getElementById('contact-supply-cat')
+            : document.getElementById('contact-digital-service');
           if (targetSelect) targetSelect.value = preselectVal;
         }
 

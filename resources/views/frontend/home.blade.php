@@ -131,7 +131,7 @@
 
       <div class="solutions-bento-grid">
         <!-- 1. Custom Software (Featured Large) -->
-        <a href="services/custom-software-development.html" class="bento-card bento-card-large" data-animate="fade-up">
+        <a href="{{ route('services.custom-software-development') }}" class="bento-card bento-card-large" data-animate="fade-up">
           <div>
             <div class="bento-card-header">
               <div class="bento-icon-badge">
@@ -153,7 +153,7 @@
         </a>
 
         <!-- 2. AI-Based Software Solutions (Featured Large) -->
-        <a href="services/ai-software-solutions.html" class="bento-card bento-card-large" data-animate="fade-up" data-delay="100">
+        <a href="{{ route('services.ai-software-solutions') }}" class="bento-card bento-card-large" data-animate="fade-up" data-delay="100">
           <div>
             <div class="bento-card-header">
               <div class="bento-icon-badge">
@@ -173,7 +173,7 @@
         </a>
 
         <!-- 3. WhatsApp Business API -->
-        <a href="services/whatsapp-business-api.html" class="bento-card bento-card-medium" data-animate="fade-up">
+        <a href="{{ route('services.whatsapp-business-api') }}" class="bento-card bento-card-medium" data-animate="fade-up">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
@@ -187,7 +187,7 @@
         </a>
 
         <!-- 4. Customer Care Automation -->
-        <a href="services/customer-care-automation.html" class="bento-card bento-card-medium" data-animate="fade-up" data-delay="100">
+        <a href="{{ route('services.customer-care-automation') }}" class="bento-card bento-card-medium" data-animate="fade-up" data-delay="100">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
@@ -201,7 +201,7 @@
         </a>
 
         <!-- 5. Sales Bots -->
-        <a href="services/sales-bots.html" class="bento-card bento-card-medium" data-animate="fade-up" data-delay="200">
+        <a href="{{ route('services.sales-bots') }}" class="bento-card bento-card-medium" data-animate="fade-up" data-delay="200">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2zM14 8l3 3m0 0h-3m3 0V8"/></svg>
@@ -215,7 +215,7 @@
         </a>
 
         <!-- 6. Full AI Chatbots -->
-        <a href="services/ai-chatbot-solutions.html" class="bento-card bento-card-small" data-animate="fade-up">
+        <a href="{{ route('services.ai-chatbot-solutions') }}" class="bento-card bento-card-small" data-animate="fade-up">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm-6 9a6 6 0 0 1 12 0v5a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-5zM9 13h.01M15 13h.01M9 16h6"/></svg>
@@ -229,7 +229,7 @@
         </a>
 
         <!-- 7. Accounting Software -->
-        <a href="services/accounting-software.html" class="bento-card bento-card-small" data-animate="fade-up" data-delay="100">
+        <a href="{{ route('services.accounting-software') }}" class="bento-card bento-card-small" data-animate="fade-up" data-delay="100">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/><line x1="14" y1="18" x2="16" y2="18"/></svg>
@@ -243,7 +243,7 @@
         </a>
 
         <!-- 8. E-commerce Websites -->
-        <a href="services/ecommerce-websites.html" class="bento-card bento-card-small" data-animate="fade-up" data-delay="200">
+        <a href="{{ route('services.ecommerce-websites') }}" class="bento-card bento-card-small" data-animate="fade-up" data-delay="200">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
@@ -257,7 +257,7 @@
         </a>
 
         <!-- 9. Static & Dynamic Websites -->
-        <a href="services/static-dynamic-websites.html" class="bento-card bento-card-small" data-animate="fade-up" data-delay="300">
+        <a href="{{ route('services.static-dynamic-websites') }}" class="bento-card bento-card-small" data-animate="fade-up" data-delay="300">
           <div class="bento-card-header">
             <div class="bento-icon-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/><circle cx="6" cy="6" r="1" fill="currentColor"/><circle cx="10" cy="6" r="1" fill="currentColor"/></svg>
