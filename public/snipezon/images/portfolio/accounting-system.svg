@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="accGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="cyanLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#accGrad)" rx="16"/>
+  <rect x="30" y="30" width="540" height="340" fill="#0b1426" stroke="rgba(255,255,255,0.08)" rx="12"/>
+  
+  <!-- Header Bar -->
+  <rect x="50" y="50" width="500" height="40" fill="rgba(255,255,255,0.03)" rx="6"/>
+  <circle cx="70" cy="70" r="6" fill="#ef4444"/>
+  <circle cx="90" cy="70" r="6" fill="#f59e0b"/>
+  <circle cx="110" cy="70" r="6" fill="#10b981"/>
+  <text x="140" y="75" fill="#94a3b8" font-family="sans-serif" font-size="14" font-weight="600">Accounting &amp; Ledger Reporting Dashboard</text>
+
+  <!-- Metric Cards -->
+  <rect x="50" y="110" width="150" height="80" fill="rgba(124,58,237,0.12)" stroke="rgba(124,58,237,0.3)" rx="8"/>
+  <text x="65" y="135" fill="#94a3b8" font-family="sans-serif" font-size="12">Total Revenue</text>
+  <text x="65" y="165" fill="#22d3ee" font-family="sans-serif" font-size="20" font-weight="700">Financial Ledger</text>
+
+  <rect x="220" y="110" width="150" height="80" fill="rgba(34,211,238,0.12)" stroke="rgba(34,211,238,0.3)" rx="8"/>
+  <text x="235" y="135" fill="#94a3b8" font-family="sans-serif" font-size="12">Operational Costs</text>
+  <text x="235" y="165" fill="#a78bfa" font-family="sans-serif" font-size="20" font-weight="700">Automated Audit</text>
+
+  <rect x="390" y="110" width="160" height="80" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.3)" rx="8"/>
+  <text x="405" y="135" fill="#94a3b8" font-family="sans-serif" font-size="12">Tax Compliance</text>
+  <text x="405" y="165" fill="#34d399" font-family="sans-serif" font-size="20" font-weight="700">Verified System</text>
+
+  <!-- Chart & Ledger Grid -->
+  <rect x="50" y="210" width="320" height="140" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)" rx="8"/>
+  <polyline points="70,310 130,270 190,290 250,240 310,250 350,220" fill="none" stroke="url(#cyanLine)" stroke-width="3"/>
+
+  <rect x="390" y="210" width="160" height="140" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)" rx="8"/>
+  <line x1="405" y1="235" x2="535" y2="235" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <line x1="405" y1="265" x2="535" y2="265" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <line x1="405" y1="295" x2="535" y2="295" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <line x1="405" y1="325" x2="535" y2="325" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+</svg>

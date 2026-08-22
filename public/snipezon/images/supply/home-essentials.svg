@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" fill="none">
+  <defs>
+    <linearGradient id="homeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111b31" />
+      <stop offset="100%" stop-color="#07101f" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9b6cff" />
+      <stop offset="100%" stop-color="#22d3ee" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#homeGrad)" rx="16" />
+  <rect x="2" y="2" width="596" height="396" fill="none" stroke="rgba(139, 92, 246, 0.2)" stroke-width="2" rx="14" />
+  <g transform="translate(250, 140)">
+    <path d="M 50 10 L 90 45 L 90 90 L 10 90 L 10 45 Z" stroke="url(#accentGrad)" stroke-width="4" fill="rgba(124, 58, 237, 0.15)" stroke-linejoin="round" />
+    <path d="M 35 90 L 35 60 L 65 60 L 65 90" stroke="#22d3ee" stroke-width="3" fill="none" />
+    <circle cx="50" cy="40" r="8" stroke="#9b6cff" stroke-width="3" fill="none" />
+  </g>
+  <text x="300" y="290" text-anchor="middle" font-family="'Sora', sans-serif" font-weight="700" font-size="20" fill="#f8fafc">Home Essentials</text>
+  <text x="300" y="320" text-anchor="middle" font-family="'Manrope', sans-serif" font-size="14" fill="#a7b0c0">Daily-use products &amp; modern household supplies</text>
+</svg>

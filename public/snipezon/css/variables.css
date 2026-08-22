@@ -1,0 +1,100 @@
+/* Snipezon Design System - CSS Variables & Tokens */
+
+/* Font Family Imports (Modular setup so webfonts can be swapped for local fonts easily) */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap');
+
+:root {
+  /* Dark-Tech Color Palette */
+  --color-bg: #030712;
+  --color-bg-secondary: #07101f;
+  --color-bg-tertiary: #091426;
+
+  --color-surface: #0b1426;
+  --color-surface-light: #111b31;
+  --color-surface-glass: rgba(11, 20, 38, 0.75);
+  --color-surface-glass-border: rgba(139, 92, 246, 0.18);
+
+  /* Brand Accents */
+  --color-primary: #7c3aed;
+  --color-primary-light: #9b6cff;
+  --color-primary-dark: #5b21b6;
+  --color-indigo: #4f46e5;
+  --color-cyan: #22d3ee;
+  --color-cyan-glow: rgba(34, 211, 238, 0.35);
+  --color-whatsapp: #25d366;
+  --color-whatsapp-hover: #20bd5a;
+
+  /* Text Colors */
+  --color-text: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #8c9bb4;
+  --color-text-dim: #7888a3;
+
+  /* Borders & Highlights */
+  --color-border: rgba(139, 92, 246, 0.22);
+  --color-border-light: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(155, 108, 255, 0.45);
+  
+  /* Status */
+  --color-error: #ef4444;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #9b6cff 0%, #5b21b6 100%);
+  --gradient-cyan: linear-gradient(135deg, #22d3ee 0%, #4f46e5 100%);
+  --gradient-surface: linear-gradient(145deg, rgba(17, 27, 49, 0.94), rgba(7, 16, 31, 0.88));
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  --gradient-text: linear-gradient(135deg, #ffffff 30%, #a7b0c0 100%);
+  --gradient-accent-text: linear-gradient(135deg, #9b6cff 0%, #22d3ee 100%);
+
+  /* Shadows & Glows */
+  --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 40px rgba(124, 58, 237, 0.22);
+  --shadow-glow-cyan: 0 0 30px rgba(34, 211, 238, 0.25);
+  --shadow-header: 0 10px 30px rgba(3, 7, 18, 0.85);
+
+  /* Typography System */
+  --font-heading: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Responsive Fluid Typography */
+  --font-size-hero: clamp(2.25rem, 5vw, 4rem);
+  --font-size-h1: clamp(2rem, 4vw, 3.25rem);
+  --font-size-h2: clamp(1.65rem, 3.2vw, 2.5rem);
+  --font-size-h3: clamp(1.35rem, 2.4vw, 1.75rem);
+  --font-size-h4: clamp(1.15rem, 1.8vw, 1.35rem);
+  --font-size-body: clamp(0.95rem, 1vw, 1.05rem);
+  --font-size-small: clamp(0.85rem, 0.9vw, 0.925rem);
+  --font-size-eyebrow: 0.8125rem;
+
+  /* Layout Containers */
+  --container-width: 1280px;
+  --container-padding: clamp(16px, 4vw, 32px);
+  --header-height: 80px;
+
+  /* Border Radii */
+  --radius-small: 8px;
+  --radius-medium: 14px;
+  --radius-large: 22px;
+  --radius-pill: 999px;
+
+  /* Transitions */
+  --transition-fast: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 600ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Spacing */
+  --section-space: clamp(60px, 8vw, 120px);
+  --grid-gap: clamp(16px, 3vw, 32px);
+
+  /* Z-Indices */
+  --z-background: -10;
+  --z-base: 1;
+  --z-header: 1000;
+  --z-dropdown: 1050;
+  --z-floating: 1100;
+  --z-drawer: 1200;
+  --z-modal: 1300;
+}

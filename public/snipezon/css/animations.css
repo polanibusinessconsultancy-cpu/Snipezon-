@@ -1,0 +1,88 @@
+/* Snipezon Keyframes & Animation Architecture */
+
+/* Keyframe Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.6), 0 0 60px rgba(34, 211, 238, 0.3);
+  }
+}
+
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.05);
+  }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes whatsappPulse {
+  0%, 100% {
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
+  }
+  50% {
+    box-shadow: 0 8px 40px rgba(37, 211, 102, 0.8), 0 0 0 12px rgba(37, 211, 102, 0.15);
+  }
+}
+
+.floating-whatsapp.has-pulse {
+  animation: whatsappPulse 3s infinite ease-in-out;
+}
+
+/* Scroll Reveal Animations Architecture */
+[data-animate] {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity 750ms cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 750ms cubic-bezier(0.16, 1, 0.3, 1), 
+              filter 750ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-animate="fade-up"] {
+  transform: translateY(35px);
+}
+
+[data-animate="fade-left"] {
+  transform: translateX(45px);
+}
+
+[data-animate="fade-right"] {
+  transform: translateX(-45px);
+}
+
+[data-animate="scale-in"] {
+  transform: scale(0.92);
+}
+
+[data-animate="blur-in"] {
+  filter: blur(12px);
+}
+
+/* Active Animated State */
+[data-animate].is-animated {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+  filter: blur(0);
+}
+
+/* Reduced Motion Override for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  [data-animate] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+
+  .floating-whatsapp.has-pulse {
+    animation: none !important;
+  }
+}
