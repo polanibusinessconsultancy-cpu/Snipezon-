@@ -1,66 +1,287 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
+  <img src="public/snipezon/images/logo/logo.svg" alt="Snipezon" width="290">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+  <h1>Smart Digital Solutions Powered by AI</h1>
+  <p><strong>Technology • Automation • Procurement</strong></p>
+  <p>One trusted partner for intelligent digital systems and dependable general supply.</p>
 
-## About Laravel
+  <p>
+    <img src="https://img.shields.io/badge/Laravel-12.67-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel 12.67">
+    <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8.2">
+    <img src="https://img.shields.io/badge/MySQL-MariaDB-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL and MariaDB">
+    <img src="https://img.shields.io/badge/Status-Active_Development-7C3AED?style=for-the-badge" alt="Active Development">
+  </p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+  <p>
+    <a href="#-what-snipezon-provides">Services</a> •
+    <a href="#-implementation-status">Progress</a> •
+    <a href="#-local-development">Installation</a> •
+    <a href="#-security-foundation">Security</a> •
+    <a href="#-contact">Contact</a>
+  </p>
+</div>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Snipezon is a business solutions company providing custom software, AI-powered automation, modern websites, WhatsApp integrations, customer engagement systems, and requirement-based general item sourcing.
 
-## Learning Laravel
+This repository contains the Laravel-based Snipezon website and its developing administration platform. The original static website is retained separately as a protected visual and content reference during the migration.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+> [!IMPORTANT]
+> **Current status:** The Laravel foundation, authentication, roles, Homepage, and About page are implemented. Remaining public pages and database-driven admin modules are being integrated progressively.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## ✦ What Snipezon Provides
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+| 💻 Digital Solutions | 📦 General Supply |
+| --- | --- |
+| Custom Software Development | Home Essentials |
+| AI-Based Software Solutions | Corporate Items |
+| WhatsApp Business API Setup | Industrial Items |
+| Customer Care Automation | Toys |
+| Sales Bots and AI Chatbots | Multi-category sourcing |
+| Accounting Software | Requirement coordination |
+| E-commerce Websites | Business procurement support |
+| Static and Dynamic Websites | Reliable sourcing assistance |
 
-## Laravel Sponsors
+## ◈ Platform Vision
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+The completed platform will combine three connected areas:
 
-### Premium Partners
+```mermaid
+flowchart TD
+    A["Public Website"] --> B["Laravel Application"]
+    C["Admin Dashboard"] --> B
+    B --> D["MySQL Database"]
+    B --> E["Public Media"]
+    B --> F["Protected Files"]
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+| Layer | Responsibility |
+| --- | --- |
+| 🌐 **Public Website** | Services, supply categories, portfolio, company information, forms, and verified performance results |
+| 🛡️ **Admin Dashboard** | Website content, enquiries, services, portfolio, media, SEO, settings, and administrator roles |
+| 🗄️ **MySQL Database** | Structured content, enquiries, audit history, case studies, configuration, and administration data |
+| 🔒 **Private Storage** | Protected enquiry attachments and Lighthouse PDF evidence |
 
-## Contributing
+## 🚧 Implementation Status
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| Component | State | Milestone |
+| --- | :---: | :---: |
+| Laravel application foundation | ✅ Complete | Verified |
+| Authentication and role security | ✅ Complete | Verified |
+| Homepage Blade conversion | ✅ Approved | Locked |
+| About page Blade conversion | ✅ Approved | Locked |
+| Digital Solutions page | 🟣 In progress | Active |
+| General Supply and Portfolio | ⏳ Pending | Queued |
+| Contact and enquiry backend | ⏳ Pending | Queued |
+| Nine service detail pages | ⏳ Pending | Queued |
+| Database-driven CMS | 🗓️ Planned | Roadmap |
+| Admin dashboard modules | 🗓️ Planned | Roadmap |
+| Performance and SEO showcase | 🗓️ Planned | Roadmap |
 
-## Code of Conduct
+## ⚙️ Technology Stack
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+| Category | Technologies |
+| --- | --- |
+| Backend | PHP 8.2 · Laravel 12 |
+| Frontend | Blade · HTML5 · CSS3 · Vanilla JavaScript |
+| Database | MySQL / MariaDB |
+| Authentication | Laravel Breeze |
+| Build tooling | Vite · Node.js · npm |
+| Quality | PHPUnit · Composer Audit · responsive browser testing |
+| Version control | Git · GitHub |
 
-## Security Vulnerabilities
+The frontend uses a dark-tech luxury design system with responsive layouts, glass surfaces, scroll reveals, interactive cards, keyboard-friendly navigation, reduced-motion support, and accessible UI controls.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🔐 Security Foundation
 
-## License
+- Public registration is disabled.
+- Admin routes are protected by authentication, active-user checks, and role authorization.
+- Supported roles include `Admin` and `Super Admin`.
+- Administrator passwords require at least 12 characters, mixed case, a number, and a symbol.
+- Passwords are hashed and never stored in plain text.
+- Environment credentials remain in `.env`, which must never be committed.
+- Private enquiry documents and performance reports are intended for non-public storage and authorized controller downloads.
+- Composer security auditing is kept enabled.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🚀 Local Development
+
+### Requirements
+
+- PHP 8.2 or newer
+- Composer 2
+- MySQL or MariaDB
+- Node.js and npm
+
+### 1. Install the project
+
+```bash
+git clone <your-repository-url>
+cd Snipezon-Laravel
+composer install
+npm install
+```
+
+### 2. Create the environment
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+On Windows PowerShell, use:
+
+```powershell
+Copy-Item .env.example .env
+php artisan key:generate
+```
+
+### 3. Configure the database
+
+```env
+APP_NAME=Snipezon
+APP_URL=http://127.0.0.1:8000
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=snipezon_db
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Never commit real credentials or the `.env` file.
+
+### 4. Prepare and run the application
+
+```bash
+php artisan migrate
+npm run build
+php artisan serve --host=127.0.0.1 --port=8000
+```
+
+Open [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+For active frontend development, run this in a second terminal:
+
+```bash
+npm run dev
+```
+
+## 👤 Creating an Administrator
+
+Use the secure interactive command:
+
+```bash
+php artisan snipezon:create-admin
+```
+
+Enter the administrator details when prompted. Password input is hidden and validated before the account is created.
+
+## 🧰 Useful Commands
+
+```bash
+# Clear Laravel caches
+php artisan optimize:clear
+
+# Display registered routes
+php artisan route:list
+
+# Run automated tests
+php artisan test
+
+# Check PHP dependency advisories
+composer audit
+
+# Create a production frontend build
+npm run build
+```
+
+## 🖥️ Planned Admin Dashboard
+
+| Content and Business | Operations and Governance |
+| --- | --- |
+| 📊 Dashboard Overview | 📥 Enquiries and Attachments |
+| 📝 Website Content | 🖼️ Media Library |
+| 💻 Digital Services | 🔎 SEO Manager |
+| 📦 General Supply | ⚙️ Website and Contact Settings |
+| 🗂️ Portfolio and Case Studies | 🔗 Social Links |
+| 📈 Performance and SEO Audits | 👥 Admin Users and Roles |
+
+## 📈 Performance and SEO Showcase
+
+A verified showcase will present real project quality evidence, including:
+
+- Desktop and mobile Lighthouse results
+- Performance score
+- Accessibility score
+- Best Practices score
+- SEO score
+- Audit date and audited URL
+- Verification status
+- Screenshots and private PDF evidence
+
+Only verified, published audits explicitly enabled for public display will appear on the website.
+
+## 🧭 Conversion Workflow
+
+```mermaid
+flowchart LR
+    A["Static Reference"] --> B["Blade Conversion"]
+    B --> C["DOM Audit"]
+    C --> D["Visual Review"]
+    D --> E["Approval"]
+    E --> F["Checkpoint"]
+```
+
+### Development Rules
+
+To preserve visual parity and project stability:
+
+- Treat the original `Snipezon-Static` directory as read-only.
+- Convert and approve one public page at a time.
+- Do not use bulk or regex-based HTML-to-Blade rewrites.
+- Preserve original component classes and direct-child DOM relationships.
+- Re-test already approved pages after every conversion.
+- Verify desktop and mobile layouts before committing.
+- Never commit `.env`, credentials, private uploads, or generated secrets.
+
+## ✅ Testing Checklist
+
+Before a release or checkpoint commit, run:
+
+```bash
+php artisan optimize:clear
+php artisan test
+composer audit
+npm run build
+git diff --check
+```
+
+Also verify:
+
+- Public routes load without server errors.
+- Guest users cannot access `/admin`.
+- `/register` remains unavailable.
+- Navigation, accordions, tabs, forms, and mobile drawer controls work with keyboard input.
+- Images and fonts return successful responses.
+- No horizontal overflow exists at supported responsive widths.
+- Approved pages remain visually unchanged.
+
+## 📞 Contact
+
+- **Company:** Snipezon
+- **Phone / WhatsApp:** [+92 312 2261919](https://wa.me/923122261919)
+- **Email:** [ceo@snipezon.com](mailto:ceo@snipezon.com)
+- **Address:** Shop No. F19, 1st Floor, Danny Craft Tower, Saddar
+
+## © License and Usage
+
+This project contains proprietary Snipezon branding, content, design assets, and business implementation. Unless a separate license is added, the source code and assets are not licensed for copying, redistribution, resale, or commercial reuse.
+
+<div align="center">
+  <br>
+  <strong>Built for Snipezon</strong>
+  <br>
+  <sub>Intelligent digital systems • Responsible delivery • Reliable business sourcing</sub>
+</div>
